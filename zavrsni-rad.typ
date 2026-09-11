@@ -68,8 +68,13 @@
 
 // TODO: Овде укључујете поглавља
 #include "poglavlja/1-uvod.typ"
-#include "poglavlja/2-stanje.typ"
-#include "poglavlja/7-zakljucak.typ"
+#include "poglavlja/2-teorijske-osnove.typ"
+#include "poglavlja/3-zahtevi.typ"
+#include "poglavlja/4-tehnologije.typ"
+#include "poglavlja/5-arhitektura.typ"
+#include "poglavlja/6-implementacija.typ"
+#include "poglavlja/7-primer-koriscenja.typ"
+#include "poglavlja/8-zakljucak.typ"
 
 
 
@@ -115,7 +120,7 @@
 #include "biografija.typ"
 
 #show "Available at:": "Доступно на "
-#bibliography(title: [Литература], "literatura.bib")
+#bibliography(title: [Литература], "literatura.bib", style: "ieee")
 #checkbib()
 
 // Потребне исправке и дораде. У тексту користити са

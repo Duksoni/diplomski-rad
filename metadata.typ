@@ -1,12 +1,12 @@
-#let format_strane = "iso-b5"         // могуће вредности: iso-b5, a4
-#let naslov = "Шаблон и упутство за писање завршних радова"
-#let autor = "Уписати име и презиме"
+#let format_strane = "a4"         // могуће вредности: iso-b5, a4
+#let naslov = "Микросервисна платформа за каталог, управљање личном библиотеком и размену утисака о видео играма"
+#let autor = "Душан Комадиновић"
 
 // На енглеском
-#let naslov_eng = "Template and tutorial for thesis preparation"
-#let autor_eng = "Upisati ime i prezime na latinici"
+#let naslov_eng = "Microservice platform for cataloging, personal library management and sharing opinions on video games"
+#let autor_eng = "Dušan Komadinović"
 
-#let indeks = "Уписати индекс"
+#let indeks = "SV65/2022"
 
 // Име и презиме ментора
 #let mentor = "Игор Дејановић"
@@ -16,28 +16,25 @@
 // Скинути коментаре са одговарајућих линија
 #let studijski_program = "Софтверско инжењерство и информационе технологије"
 //#let studijski_program = "Рачунарство и аутоматика"
-#let stepen = "Мастер академске студије"
-//#let stepen = "Основне академске студије"
+// #let stepen = "Мастер академске студије"
+#let stepen = "Основне академске студије"
 
 #let godina = [#datetime.today().year()]
 
-#let kljucne_reci = "Шаблон, завршни рад, упутство"
+#let kljucne_reci = "Rust, микросервиси, софтверска архитектура, веб апликација, видео игре"
 #let apstrakt = [
-     Овај документ представља упутство за писање завршних радова на Факултету
-     техничких наука Универзитета у Новом Саду. У исто време је и шаблон за Typst.
+  Овај рад описује дизајн и имплементацију микросервисне веб платформе која нуди јединствени каталог видео игара, уређивање личне библиотеке и размену утисака међу играчима. Пет доменских сервиса је иза API _gateway_-а, сваки са сопственим складиштем по обрасцу база података по сервису. Сервиси су пројектовани за независан развој, тестирање и пуштање у рад. Налози, каталог и библиотека су у _PostgreSQL_-у, кориснички садржај и метаподаци медија у _MongoDB_-у, а слике и видео у _MinIO_-у. Серверски део је у _Rust_-у (_Axum_), уз JWT (RS256) и контролу приступа према улози на _gateway_-у и сервисима. _Nginx_ сервира _Angular_ клијент, све се покреће преко _Docker Compose_-а и демонстрирано је кроз токове каталога, библиотеке и модерације.
 ]
 
 // На енглеском
-#let kljucne_reci_eng = "Template, thesis, tutorial"
+#let kljucne_reci_eng = "Rust, microservices, software architecture, web application, video games"
 #let apstrakt_eng = [
-     This document provides guidelines for writing final theses at the Faculty
-     of Technical Sciences, University of Novi Sad. At the same time, it serves
-     as a Typst template.
+  This thesis presents a microservice web platform for a unified video game catalog, personal library management, and opinion sharing among players. Five domain services sit behind an API gateway, each with its own storage under the database-per-service pattern. Services are designed for independent development, testing, and deployment. Accounts, catalog, and library data reside in PostgreSQL; user content and media metadata in MongoDB; and images and video in MinIO. The backend is implemented in Rust (Axum), with JWT (RS256) and role-based access control at the gateway and across services. Nginx serves the Angular client, the platform runs via Docker Compose, and its use is demonstrated through catalog, library, and moderation flows.
 ]
 
 // TODO: Текст задатка добијате од ментора. Заменити доле #lorem(100) са текстом задатка.
 #let zadatak = [
-     #lorem(100)
+    #lorem(100)
 ]
 
 // TODO: Датум одбране и чланове комисије добијате од ментора
